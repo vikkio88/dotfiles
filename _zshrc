@@ -1,0 +1,20 @@
+# export PATH=$HOME/.deta/bin:$HOME/.nimble/bin:$HOME/.go/bin:$HOME/bin:/usr/local/bin:$HOME/.pub-cache/bin:$HOME/.local/bin:$PATH
+export PATH=$HOME/snap/flutter/common/flutter:/usr/local/go/bin:$PATH
+export ZSH=/home/vikkio/.oh-my-zsh
+ZSH_THEME="candy"
+plugins=(
+  git
+)
+
+source $ZSH/oh-my-zsh.sh
+
+source $HOME/.cargo/env
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+alias dc="docker-compose $1"
+alias open="nemo"
+alias c="cd ~/code"
+
+alias hg="HYGEN_TMPLS=~/.hygen/_templates hygen"

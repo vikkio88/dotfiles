@@ -1,0 +1,4 @@
+Host pi4
+    User pi
+    HostName PIHOST
+    IdentityFile ~/.ssh/YOURIDFILE

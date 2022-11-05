@@ -1,0 +1,51 @@
+{
+  "xtest": {
+    "prefix": "xtest",
+    "description": "",
+    "body": [
+      "[Fact]",
+      "public void Test()",
+      "{",
+      "    Assert.NotStrictEqual(expected, value);",
+      "}"
+    ]
+  },
+  "rxprop": {
+    "prefix": "rxprop",
+    "description": "",
+    "body": [
+      "private $1? _$2 = null;",
+      "public $1? $2",
+      "{",
+      "    get => _$2;",
+      "    set => this.RaiseAndSetIfChanged(ref _$2, value);",
+      "}"
+    ]
+  },
+  "clog": {
+    "prefix": "clog",
+    "description": "",
+    "body": [
+      "System.Console.WriteLine(\\$\"$1\");"
+    ]
+  },
+  "stprop": {
+    "prefix": "stprop",
+    "description": "",
+    "body": [
+      "public static readonly StyledProperty<string> $1Property = AvaloniaProperty.Register<$2, string>(nameof($1));",
+      "public string TextAlignment",
+      "{",
+      "    get => GetValue($1Property);",
+      "    set => SetValue($1Property, value);",
+      "}"
+    ]
+  },
+  "rxcmd": {
+    "prefix": "rxcmd",
+    "description": "",
+    "body": [
+      "public ReactiveCommand<string, Unit> $1 { get; set; }"
+    ]
+  }
+}

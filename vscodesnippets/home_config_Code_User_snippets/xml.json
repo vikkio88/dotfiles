@@ -1,0 +1,182 @@
+{
+  "grid": {
+    "prefix": "grid",
+    "description": "",
+    "body": [
+      "<Grid ColumnDefinitions=\"*,*\"",
+      "        RowDefinitions=\"*,*\">",
+      "        <StackPanel Grid.Row=\"0\"",
+      "                Grid.Column=\"0\"",
+      "                Background=\"#d3d3d3\">",
+      "                <TextBlock Text=\"1\" />",
+      "        </StackPanel>",
+      "        <StackPanel Grid.Row=\"0\"",
+      "                Grid.Column=\"1\">",
+      "                <TextBlock Text=\"2\" />",
+      "        </StackPanel>",
+      "        <StackPanel Grid.Row=\"1\"",
+      "                Grid.Column=\"0\">",
+      "                <TextBlock Text=\"3\" />",
+      "        </StackPanel>",
+      "        <StackPanel Grid.Row=\"1\"",
+      "                Grid.Column=\"1\"",
+      "                Background=\"#d3d3d3\">",
+      "                <TextBlock Text=\"4\" />",
+      "        </StackPanel>",
+      "</Grid>"
+    ]
+  },
+  "gride": {
+    "prefix": "gride",
+    "description": "empty grid",
+    "body": [
+      "<Grid ColumnDefinitions=\"*,*\"",
+      "        RowDefinitions=\"*,*\">",
+      "</Grid>"
+    ]
+  },
+  "gridcell": {
+    "prefix": "gridcell",
+    "description": "",
+    "body": [
+      "<StackPanel Grid.Row=\"0\"",
+      "        Grid.Column=\"0\"",
+      "        Grid.ColumnSpan=\"1\">",
+      "        <TextBlock Text=\"SomeText\" />",
+      "</StackPanel>"
+    ]
+  },
+  "txt": {
+    "prefix": "txt",
+    "description": "",
+    "body": [
+      "<TextBlock Text=\"Some Text\" />"
+    ]
+  },
+  "txtbind": {
+    "prefix": "txtbind",
+    "description": "",
+    "body": [
+      "<TextBlock Text=\"{Binding $1}\" />"
+    ]
+  },
+  "cellb": {
+    "prefix": "cellb",
+    "description": "",
+    "body": [
+      "<Border Grid.Row=\"0\"",
+      "    Grid.Column=\"0\"",
+      "    Grid.ColumnSpan=\"1\"",
+      "    Grid.RowSpan=\"1\"",
+      "    BorderBrush=\"Black\"",
+      "    BorderThickness=\"1\">",
+      "    <TextBlock Text=\"Some example\" />",
+      "</Border>"
+    ]
+  },
+  "bind": {
+    "prefix": "bind",
+    "description": "",
+    "body": [
+      "\"{Binding $1}\""
+    ]
+  },
+  "style": {
+    "prefix": "style",
+    "description": "",
+    "body": [
+      "<Style Selector=\"$1.$2\">",
+      "        <Setter Property=\"SomeProp\"",
+      "                Value=\"SomeValue\" />",
+      "</Style>"
+    ]
+  },
+  "stylep": {
+    "prefix": "stylep",
+    "description": "",
+    "body": [
+      "<Setter Property=\"$1\"",
+      "    Value=\"$2\" />",
+      ""
+    ]
+  },
+  "faicon": {
+    "prefix": "faicon",
+    "description": "",
+    "body": [
+      "<i:Icon Value=\"fa fa-$1\"/>"
+    ]
+  },
+  "faiconns": {
+    "prefix": "faiconns",
+    "description": "",
+    "body": [
+      "xmlns:i=\"clr-namespace:Projektanker.Icons.Avalonia;assembly=Projektanker.Icons.Avalonia\""
+    ]
+  },
+  "sp": {
+    "prefix": "sp",
+    "description": "",
+    "body": [
+      "<StackPanel>",
+      "</StackPanel>",
+      ""
+    ]
+  },
+  "converter": {
+    "prefix": "converter",
+    "description": "",
+    "body": [
+      "<converters:$1 x:Key=\"$1\"/>"
+    ]
+  },
+  "bindconvert": {
+    "prefix": "bindconvert",
+    "description": "",
+    "body": [
+      "\"{Binding $2, Converter={StaticResource $1}}\""
+    ]
+  },
+  "strfmt": {
+    "prefix": "bindstrfmt",
+    "description": "",
+    "body": [
+      "\"{Binding $1, StringFormat='$2{0}'}\""
+    ]
+  },
+  "multibind": {
+    "prefix": "multibind",
+    "description": "",
+    "body": [
+      "<$1.$2>",
+      "    <MultiBinding Converter=\"{StaticResource $3}\"",
+      "        ConverterParameter=\"True\">",
+      "        <Binding Path=\"Id\" />",
+      "        <Binding Path=\"DataContext.SomeStuff\"",
+      "            ElementName=\"Root\" />",
+      "    </MultiBinding>",
+      "</$1.$2>"
+    ]
+  },
+  "tbind": {
+    "prefix": "tbind",
+    "description": "",
+    "body": [
+      "\"{TemplateBinding $1}\""
+    ]
+  },
+  "tbindc": {
+    "prefix": "tbindc",
+    "description": "",
+    "body": [
+      "\"{Binding $1, RelativeSource={RelativeSource TemplatedParent}}\""
+    ]
+  },
+  "conv!null": {
+    "prefix": "bindvisiblenotnull",
+    "description": "",
+    "body": [
+      "IsVisible=\"{Binding $1, Converter={x:Static ObjectConverters.IsNotNull}}\""
+    ]
+  }
+}

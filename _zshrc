@@ -16,5 +16,7 @@ export NVM_DIR="$HOME/.nvm"
 alias dc="docker-compose $1"
 alias open="nemo"
 alias c="cd ~/code"
+alias cdd="cd ~/Downloads"
 
 alias hg="HYGEN_TMPLS=~/.hygen/_templates hygen"
+alias nr="npm run"

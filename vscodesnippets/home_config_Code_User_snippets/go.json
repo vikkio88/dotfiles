@@ -1,0 +1,85 @@
+{
+  "struct": {
+    "prefix": "struct",
+    "description": "",
+    "body": [
+      "type $1 struct{}"
+    ]
+  },
+  "fore": {
+    "prefix": "fore",
+    "description": "ForEach",
+    "body": [
+      "for i,v := range $1 {",
+      "   $2 ",
+      "}"
+    ]
+  },
+  "makearr": {
+    "prefix": "makearr",
+    "description": "make a known length array",
+    "body": [
+      "$3arr := make([]*$1, len($2))"
+    ]
+  },
+  "enum": {
+    "prefix": "enum",
+    "description": "",
+    "body": [
+      "type $1 uint8",
+      "",
+      "",
+      "const (",
+      "\t$2 $1 = iota",
+      "\t$3",
+      ")",
+      "",
+      "const (",
+      "\t$2    string = \"$2\"",
+      "\t$3   string = \"$3\"",
+      ")",
+      "",
+      "func getMapping() map[$1]string {",
+      "\treturn map[$1]string{",
+      "\t\t$2:   $2,",
+      "\t\t$3:    $3,",
+      "\t}",
+      "}",
+      "",
+      "func getReverseMapping() map[string]$1 {",
+      "\treturn map[string]$1{",
+      "\t\t$2 : $2,",
+      "\t\t$3 : $3,",
+      "\t}",
+      "}",
+      "",
+      "func $1FromString(route string) $1 {",
+      "\troute = strings.ToUpper(route)",
+      "\tmapping := getReverseMapping()",
+      "\tif val, ok := mapping[route]; ok {",
+      "\t\treturn val",
+      "\t}",
+      "",
+      "\treturn Main",
+      "}",
+      "",
+      "func (a $1) String() string {",
+      "\tmapping := getMapping()",
+      "\tif val, ok := mapping[a]; ok {",
+      "\t\treturn val",
+      "\t}",
+      "",
+      "\treturn invalid",
+      "}"
+    ]
+  },
+  "test": {
+    "prefix": "test",
+    "description": "",
+    "body": [
+      "func Test$1(t *testing.T) {",
+      "\tassert.Equal(t, true, false)",
+      "}"
+    ]
+  }
+}

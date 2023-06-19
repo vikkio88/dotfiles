@@ -178,5 +178,35 @@
     "body": [
       "IsVisible=\"{Binding $1, Converter={x:Static ObjectConverters.IsNotNull}}\""
     ]
+  },
+  "tooltip": {
+    "prefix": "tooltip",
+    "description": "",
+    "body": [
+      "ToolTip.Tip=\"$1\""
+    ]
+  },
+  "resourcesUC": {
+    "prefix": "resourcesUC",
+    "description": "",
+    "body": [
+      "<UserControl.Resources>",
+      "  $1",
+      "</UserControl.Resources>"
+    ]
+  },
+  "resconverter": {
+    "prefix": "resconverter",
+    "description": "",
+    "body": [
+      "<converters:$1 x:Key=\"$1\" />"
+    ]
+  },
+  "classes": {
+    "prefix": "classes",
+    "description": "",
+    "body": [
+      "Classes=\"$1\""
+    ]
   }
 }

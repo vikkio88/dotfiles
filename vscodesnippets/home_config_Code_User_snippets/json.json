@@ -1,0 +1,23 @@
+{
+  "yoku_game": {
+    "prefix": "yoku_game",
+    "description": "",
+    "body": [
+      "    {",
+      "        \"name\": \"$1\",",
+      "        \"genre\": \"\",",
+      "        \"meta\": {",
+      "            \"device\": \"pc\",",
+      "            \"store\": \"epic\",",
+      "            \"played\": 0,",
+      "            \"edition\": null,",
+      "            \"refunded\": false,",
+      "            \"price\": 0",
+      "        },",
+      "        \"tags\": \"\",",
+      "        \"links\": \"\",",
+      "        \"image\": \"\"",
+      "    },"
+    ]
+  }
+}

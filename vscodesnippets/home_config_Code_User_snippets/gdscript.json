@@ -1,0 +1,16 @@
+{
+  "onrenode": {
+    "prefix": "onrenode",
+    "description": "",
+    "body": [
+      "@onready var $1: Node2D = \\$$1"
+    ]
+  },
+  "onrepreload": {
+    "prefix": "onrepreload",
+    "description": "",
+    "body": [
+      "@onready var $1 = preload(\"res://$2\")"
+    ]
+  }
+}

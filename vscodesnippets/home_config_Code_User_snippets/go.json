@@ -81,5 +81,44 @@
       "\tassert.Equal(t, true, false)",
       "}"
     ]
+  },
+  "lbl": {
+    "prefix": "lbl",
+    "description": "fyne label",
+    "body": [
+      "widget.NewLabel(\"$1\")"
+    ]
+  },
+  "btn": {
+    "prefix": "btn",
+    "description": "fyne button",
+    "body": [
+      "widget.NewButton(\"$1\", func() {})"
+    ]
+  },
+  "fbr": {
+    "prefix": "fbr",
+    "description": "Fluent Border",
+    "body": [
+      "NewFborder().Get($1)"
+    ]
+  },
+  "tostring": {
+    "prefix": "tostring",
+    "description": "stringer interface",
+    "body": [
+      "func ($2 *$1) String() string {",
+      "\treturn fmt.Sprintf(\"%s\", \"something\")",
+      "}"
+    ]
+  },
+  "met": {
+    "prefix": "met",
+    "description": "",
+    "body": [
+      "func (*$1) $2() {",
+      "\t$3",
+      "}"
+    ]
   }
 }

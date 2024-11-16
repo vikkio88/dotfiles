@@ -2,3 +2,8 @@ Host pi4
     User pi
     HostName PIHOST
     IdentityFile ~/.ssh/YOURIDFILE
+
+Host awd
+    User vikkio
+    HostName ssh-vikkio.alwaysdata.net
+    IdentityFile THEONE

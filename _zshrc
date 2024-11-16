@@ -1,7 +1,7 @@
 # export PATH=$HOME/.deta/bin:$HOME/.nimble/bin:$HOME/.go/bin:$HOME/bin:/usr/local/bin:$HOME/.pub-cache/bin:$HOME/.local/bin:$PATH
 export PATH=$HOME/snap/flutter/common/flutter:/usr/local/go/bin:$PATH
 export ZSH=/home/vikkio/.oh-my-zsh
-ZSH_THEME="candy"
+ZSH_THEME="refined"
 plugins=(
   git
 )

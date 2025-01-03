@@ -1,5 +1,6 @@
 Host pi4
     User pi
+    SetEnv TERM=xterm-256color #ghostty workaroundhttps://ghostty.org/docs/help/terminfo
     HostName PIHOST
     IdentityFile ~/.ssh/YOURIDFILE
 

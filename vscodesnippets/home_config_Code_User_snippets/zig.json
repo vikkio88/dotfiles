@@ -1,0 +1,26 @@
+{
+  "@std": {
+    "prefix": "@std",
+    "description": "import std",
+    "body": [
+      "const std = @import(\"std\");",
+      ""
+    ]
+  },
+  "@testing": {
+    "prefix": "@testing",
+    "description": "import testing",
+    "body": [
+      "const testing = std.testing;",
+      ""
+    ]
+  },
+  "test": {
+    "prefix": "test",
+    "body": [
+      "test \"$1\" {",
+      "    try testing.expect($3);",
+      "}"
+    ]
+  }
+}

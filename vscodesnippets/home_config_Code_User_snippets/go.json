@@ -33,44 +33,7 @@
       "\t$2 $1 = iota",
       "\t$3",
       ")",
-      "",
-      "const (",
-      "\t$2    string = \"$2\"",
-      "\t$3   string = \"$3\"",
-      ")",
-      "",
-      "func getMapping() map[$1]string {",
-      "\treturn map[$1]string{",
-      "\t\t$2:   $2,",
-      "\t\t$3:    $3,",
-      "\t}",
-      "}",
-      "",
-      "func getReverseMapping() map[string]$1 {",
-      "\treturn map[string]$1{",
-      "\t\t$2 : $2,",
-      "\t\t$3 : $3,",
-      "\t}",
-      "}",
-      "",
-      "func $1FromString(route string) $1 {",
-      "\troute = strings.ToUpper(route)",
-      "\tmapping := getReverseMapping()",
-      "\tif val, ok := mapping[route]; ok {",
-      "\t\treturn val",
-      "\t}",
-      "",
-      "\treturn Main",
-      "}",
-      "",
-      "func (a $1) String() string {",
-      "\tmapping := getMapping()",
-      "\tif val, ok := mapping[a]; ok {",
-      "\t\treturn val",
-      "\t}",
-      "",
-      "\treturn invalid",
-      "}"
+      ""
     ]
   },
   "test": {
@@ -119,6 +82,47 @@
       "func (*$1) $2() {",
       "\t$3",
       "}"
+    ]
+  },
+  "sprf": {
+    "prefix": "sprf",
+    "description": "fmt.Sprintf",
+    "body": [
+      "fmt.Sprintf(\"%s\", $1)"
+    ]
+  },
+  "junmars": {
+    "prefix": "junmars",
+    "description": "json unmarshal",
+    "body": [
+      "if $1 == \"\" {",
+      "\treturn $2{}",
+      "}",
+      "",
+      "var result $2",
+      "data := $1",
+      "err := json.Unmarshal([]byte(data), &result)",
+      "if err != nil {",
+      "\tfmt.Println(\"error while loading\", err)",
+      "\treturn $2{}",
+      "}",
+      "",
+      "return result"
+    ]
+  },
+  "jmarsh": {
+    "prefix": "jmarsh",
+    "description": "",
+    "body": [
+      "if $1 == nil {",
+      "\treturn nil",
+      "}",
+      "",
+      "var result string",
+      "data, _ := json.Marshal($1)",
+      "result = string(data)",
+      "",
+      "return &result"
     ]
   }
 }

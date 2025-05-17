@@ -20,3 +20,6 @@ alias cdd="cd ~/Downloads"
 
 alias mk="HYGEN_TMPLS=~/.hygen/_templates hygen"
 alias nr="npm run"
+alias p="pnpm"
+alias zb="zig build"
+alias zbr="zig build run"

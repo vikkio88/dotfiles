@@ -20,16 +20,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 echo "Setting up omz zshrc"
 cp _zshrc ~/.zshrc
 
-
-echo "Setting up git"
-git config --global user.name "Vincenzo Ciaccio"
-git config --global user.email "vincenzo.ciaccio@gmail.com"
-cp _gitignore ~/.gitignore
-git config --global core.excludesfile ~/.gitignore
-git config --global core. editor "nano"
-git config --global core.editor "nano"
-git config --global pager.branch false
-
 echo "Installing Hygen Templates"
 npm i -g hygen
 mkdir ~/.hygen
@@ -46,4 +36,4 @@ eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 echo "dont forget to add ssh key to Github"
 echo "Other things to install: VSCode, Telegram, Docker"
-echo ".zshrc has golang and flutter Paths too, might want to add those"
+echo ".zshrc has golang and bun Paths too, might want to add those"

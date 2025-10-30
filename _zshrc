@@ -1,14 +1,18 @@
-# export PATH=$HOME/.deta/bin:$HOME/.nimble/bin:$HOME/.go/bin:$HOME/bin:/usr/local/bin:$HOME/.pub-cache/bin:$HOME/.local/bin:$PATH
-export PATH=$HOME/snap/flutter/common/flutter:/usr/local/go/bin:$PATH
 export ZSH=/home/vikkio/.oh-my-zsh
 ZSH_THEME="refined"
 plugins=(
   git
 )
-
 source $ZSH/oh-my-zsh.sh
-
 source $HOME/.cargo/env
+
+## Go
+export PATH="$HOME/go/bin:$PATH"
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH
+# bun completions
+[ -s "/home/vikkio/.bun/_bun" ] && source "/home/vikkio/.bun/_bun"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

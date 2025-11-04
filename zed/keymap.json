@@ -1,0 +1,91 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      // "j k": ["workspace::SendKeystrokes", "escape"]
+    }
+  },
+  {
+    "context": "Pane",
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-alt up": "pane::SplitUp",
+      "cmd-alt down": "pane::SplitDown",
+      "cmd-alt left": "pane::SplitLeft",
+      "cmd-alt right": "pane::SplitRight"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-left": null
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-cmd-left": null
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-cmd-left": "pane::GoBack"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl--": null
+    }
+  },
+  {
+    "context": "ThreadHistory",
+    "bindings": {
+      "ctrl-cmd-left": "pane::GoBack"
+    }
+  },
+  {
+    "context": "ThreadHistory",
+    "bindings": {
+      "ctrl--": null
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-cmd-right": "pane::GoForward"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-_": null
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-r": null
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-cmd-b": null
+    }
+  }
+]

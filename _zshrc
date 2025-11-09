@@ -27,3 +27,7 @@ alias nr="npm run"
 alias p="pnpm"
 alias zb="zig build"
 alias zbr="zig build run"
+
+alias code=zeditor
+alias zed=zeditor
+alias z=zeditor

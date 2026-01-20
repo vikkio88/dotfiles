@@ -31,3 +31,8 @@ alias zbr="zig build run"
 [ -s "/home/vikkio/.bun/_bun" ] && source "/home/vikkio/.bun/_bun"
 
 export PATH=$HOME/.local/bin:$PATH
+
+# Editing command buffer with ^e = CTRL+E(dit)
+export VISUAL=vim
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line

@@ -1,6 +1,6 @@
 #!/bin/sh
 echo "Installing utils/software"
-sudo apt-get install httpie dotnet6 vlc gimp dconf-editor curl git build-essential zsh
+sudo apt-get install vlc gimp curl git build-essential zsh fonts-firacode blueman xfce4-xkb-plugin albert ristretto imagemagick mugshot vim xarchiver
 
 echo "Installing zsh and omz"
 chsh -s $(which zsh)
@@ -8,10 +8,8 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 
 echo "Installing nvm/node"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bas
 nvm install stable
-nvm install 16
-nvm alias default 16
 
 
 echo "Installing rust"
@@ -20,12 +18,14 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 echo "Setting up omz zshrc"
 cp _zshrc ~/.zshrc
 
-echo "Installing Hygen Templates"
-npm i -g hygen
-mkdir ~/.hygen
-cd ~/.hygen
-git clone git@github.com:vikkio88/hygenTemplates.git _templates
+echo "Installing Ruetta Templates"
+cargo install ruetta
+git clone git@github.com:vikkio88/ruetta_templates.git ~/.ruetta_tmpl
 cd -
+ruetta init
+
+echo "Installing dev tools"
+npm i -g ntrallazzu tinchi
 
 echo "Setting up code dir"
 mkdir ~/code
@@ -35,5 +35,5 @@ ssh-keygen -t ed25519 -C "vincenzo.ciaccio@gmail.com"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
 echo "dont forget to add ssh key to Github"
-echo "Other things to install: VSCode, Telegram, Docker"
-echo ".zshrc has golang and bun Paths too, might want to add those"
+echo "Other things to install: Zed, Telegram, Docker"
+echo ".zshrc has golang, zig Paths too, might want to add those"

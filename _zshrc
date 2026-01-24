@@ -22,7 +22,7 @@ alias z=zed
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-alias mk="HYGEN_TMPLS=~/.hygen/_templates hygen"
+alias mk="ruetta"
 alias nr="npm run"
 alias p="pnpm"
 alias zb="zig build"

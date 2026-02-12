@@ -8,17 +8,17 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "debugger": {
-    "dock": "right"
+    "dock": "right",
   },
   "notification_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "restore_on_startup": "last_workspace",
   "ui_font_weight": 350.0,
   "buffer_font_weight": 350.0,
   "terminal": {
     "font_size": 16.0,
-    "font_family": ".ZedMono"
+    "font_family": ".ZedMono",
   },
   "icon_theme": "Catppuccin Mocha",
   "disable_ai": true,
@@ -31,32 +31,40 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Catppuccin Mocha"
+    "dark": "Catppuccin Mocha",
   },
-  "relative_line_numbers": false,
+  "relative_line_numbers": "disabled",
   "agent": {
-    "enabled": false
+    "enabled": false,
   },
   "tab_size": 4,
   "languages": {
     "JavaScript": {
-      "tab_size": 2
+      "tab_size": 2,
     },
     "JSON": {
-      "tab_size": 2
+      "tab_size": 2,
     },
     "JSONC": {
-      "tab_size": 2
+      "tab_size": 2,
     },
     "Svelte": {
-      "tab_size": 2
+      "tab_size": 2,
+      "formatter": "prettier",
     },
     "TypeScript": {
-      "tab_size": 2
-    }
+      "tab_size": 2,
+    },
+    "CSS": {
+      "tab_size": 2,
+    },
+    "YAML": {
+      "tab_size": 2,
+    },
   },
   "code_actions_on_format": {
     "source.organizeImports": true,
-    "source.fixAll.ruff": true
-  }
+    "source.fixAll.ruff": true,
+  },
+  "file_scan_inclusions": ["public/", "data/", ".env*"],
 }

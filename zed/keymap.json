@@ -10,14 +10,20 @@
     "context": "Workspace",
     "bindings": {
       // "shift shift": "file_finder::Toggle"
-    }
+    },
   },
   {
     "context": "Editor",
     "bindings": {
       // "j k": ["workspace::SendKeystrokes", "escape"]
-    }
+    },
   },
+  // {
+  //   "context": "Editor",
+  //   "bindings": {
+  //     "ctrl+shift+w": "emmet::",
+  //   },
+  // },
   {
     "context": "Pane",
     "use_key_equivalents": true,
@@ -25,67 +31,85 @@
       "cmd-alt up": "pane::SplitUp",
       "cmd-alt down": "pane::SplitDown",
       "cmd-alt left": "pane::SplitLeft",
-      "cmd-alt right": "pane::SplitRight"
-    }
+      "cmd-alt right": "pane::SplitRight",
+    },
   },
   {
     "context": "Editor",
     "bindings": {
-      "ctrl-shift-left": null
-    }
+      "ctrl-shift-left": null,
+    },
   },
   {
     "context": "Editor",
     "bindings": {
-      "ctrl-cmd-left": null
-    }
+      "ctrl-cmd-left": null,
+    },
   },
   {
     "context": "Pane",
     "bindings": {
-      "ctrl-cmd-left": "pane::GoBack"
-    }
+      "ctrl-cmd-left": "pane::GoBack",
+    },
   },
   {
     "context": "Pane",
     "bindings": {
-      "ctrl--": null
-    }
+      "ctrl--": null,
+    },
   },
   {
     "context": "ThreadHistory",
     "bindings": {
-      "ctrl-cmd-left": "pane::GoBack"
-    }
+      "ctrl-cmd-left": "pane::GoBack",
+    },
   },
   {
     "context": "ThreadHistory",
     "bindings": {
-      "ctrl--": null
-    }
+      "ctrl--": null,
+    },
   },
   {
     "context": "Pane",
     "bindings": {
-      "ctrl-cmd-right": "pane::GoForward"
-    }
+      "ctrl-cmd-right": "pane::GoForward",
+    },
   },
   {
     "context": "Pane",
     "bindings": {
-      "ctrl-_": null
-    }
+      "ctrl-_": null,
+    },
   },
   {
     "context": "Workspace",
     "bindings": {
-      "cmd-r": null
-    }
+      "cmd-r": null,
+    },
   },
   {
     "context": "Workspace",
     "bindings": {
-      "alt-cmd-b": null
-    }
-  }
+      "alt-cmd-b": null,
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-s": "workspace::SaveAll",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-s": null,
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "alt-cmd-s": null,
+    },
+  },
 ]

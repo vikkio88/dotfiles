@@ -36,6 +36,13 @@
       },
       "enable_lsp_tasks": true,
     },
+    "vscode-css-language-server": {
+      "settings": {
+        "css": { "lint": { "unknownAtRules": "ignore" } },
+        "scss": { "lint": { "unknownAtRules": "ignore" } },
+        "less": { "lint": { "unknownAtRules": "ignore" } },
+      },
+    },
   },
   "debugger": {
     "dock": "right",
